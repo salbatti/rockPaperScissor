@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Rockpaperscissor</title>
+      <style>
+        body{
+          background-color:  rgb(25, 25, 25);;
+          color: white;
+          padding-left: 130px;
+          padding-top: 70px;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .title{
+          font-size: 49px;
+          font-weight: bold;
+        }
+        .rock-cls{
+          height: 50px;
+        }
+        .paper-cls{
+          height: 50px;
+         
+        }
+        .scissors-cls{
+          height: 50px;
+        }
+        .move-button{
+          background: transparent;
+          border: 3px solid white;
+          width: 100px;
+          height: 100px;
+          border-radius: 50px;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+        .js-stats{
+          font-weight: bold;
+          font-size: 27px;
+        }
+        .score{
+          margin-top: 10px;
+        }
+        .reset-score-button{
+          font-weight: bold;
+          border: none;
+          padding: 7px 4px;
+        }
+        .attributes{
+          text-decoration: none;
+        }
+
+      </style>
+    </head>
+  
+    <body>
+      <p class="title">Rock Paper Scissors.</p>
+      <button 
+      onclick="
+      playGame('rock')
+     "
+     class="move-button"
+      ><img src="./media/rock-emoji.png"  class="rock-cls" alt=""></button>
+      <button
+      onclick="
+      playGame('paper')
+      "
+      class="move-button"
+      ><img src="./media/paper-emoji.png"  class="paper-cls" alt=""></button>
+      <button
+      onclick="
+        playGame('scissors')
+      "
+      class="move-button"
+      ><img src="./media/scissors-emoji.png"  class="scissors-cls" alt=""></button>
+      
+
+      <p class="js-stats">
+       
+      </p>
+
+     
+      <p class="js-result">
+       
+      </p>
+      <p class="js-score score">
+        Wins:0 ,Losses:0, Ties:0
+      </p>
+     
+      <button onclick="
+      score.wins=0;
+      score.losses=0;
+      score.ties=0
+      localStorage.removeItem('score');
+      updateScoreElement();
+      btnClick();
+      "
+      class="reset-score-button"
+      >
+        Reset Button
+      </button><br>
+      <br>
+      <a class="attribfutes" href="./10-dom-projects1.html">Go Back</a>
+      <script src="./rock-paper-scissor.js">
+        
+      </script>
+    </body>
+  </html>
